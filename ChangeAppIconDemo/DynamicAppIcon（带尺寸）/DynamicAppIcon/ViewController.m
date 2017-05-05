@@ -26,11 +26,10 @@
     NSString *weather = self.weathers[0];
     [self setAppIconWithName:weather];
     
+    // 测试推送上是否使用了20尺寸的图标
     UILocalNotification *noti = [[UILocalNotification alloc] init];
     noti.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
-    noti.alertBody = @"你看到我了吗？";
-    noti.repeatInterval=NSCalendarUnitDay;//通知重复次数 - 每天一次
-    
+    noti.alertBody = @"我们看看推送上面的App图标";
     [[UIApplication sharedApplication] scheduleLocalNotification:noti];
 }
 
